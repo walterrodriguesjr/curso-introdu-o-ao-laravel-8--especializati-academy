@@ -1,0 +1,41 @@
+CURSO INTRODUÇÃO AO LARAVEL 8 
+
+01-setup 
+	1-convite curso gratuito de laravel 8x 
+		-introdução ao curso
+
+	2-ferramentas para o curso de laravel 8 
+		-utilizar sempre a doc. do laravel 
+		-utilizar o laradock
+		-vscode
+		-git
+		-cmder (opcional) terminal de auto nivel, roda cmd linux 
+
+	3-criando um ambiente com laravel
+		*CRIANDO O AMBIENTE 
+		-sempre instalar as extenções do VS code (snippeds, intelisense, icons, etc)
+ 		-baixar o laradock no github (esse container já traz o nginx, mysql, phpmyadmin etc)
+			git clone https://github.com/Laradock/laradock.git
+		-cria uma pasta 'docker' e dentro dela coloca a pasta laradock 
+		-dentro da pasta laradock seta o .env: cp .env.example .env 
+		-subir os container, no caso, de nginx, mysql, phpmyadmin, redis, workspace
+			docker-compose up -d nginx mysql phpmyadmin redis workspace  
+			no projeto foi usado docker-compose up -d nginx mysql phpmyadmin 
+			IMPORTANTE! setar em .env  MYSQL_VERSION=5.7 versão 
+		-a configuração padrão de localhost está na pasta nginx/sites/default.conf 
+
+	4-instalando o laravel e configurando ambiente com o docker
+		-dentro da pasta laradock, roda o comando: docker-compose exec workspace bash (primeira startar o container
+de workspace) ira abrir o comando dash (linux) em seguida pode acessar pelo VScode em docker container, botão direito, 
+execute in bash 
+		-cria dentro de docker a pasta cursos, onde ficará os diversos projetos 
+		-usa o comando padrão de criação do projeto laravel via composer (lembrando que estamos em root, em linux)
+		-setar em default.conf o localhost com endereço que irã para o navegador, apos alterar, reiniciar os container 
+		-levantar os container necessários: docker-compose up -d nginx mysql phpmyadmin 
+		-fazer a configuração para que, quando digitar o arquivo no navegador, na pesquise na web, e sim, direcione 
+para o ip na propria maquina: C:\Windows\System32\drivers\etc e abrir o hosts, 
+
+	4B-versionamento de código com o git (e armazenar no github)
+		-
+ 			
+		
